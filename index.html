@@ -24,7 +24,6 @@
                     src="assets/Moon_1_3474.glb"
                 ></a-asset-item>
             </a-assets>
-
             <a-marker
                 id="marcador-AR"
                 type="pattern"
@@ -40,6 +39,23 @@
                     scale="0.002 0.002 0.002"
                     animation-mixer="loop: repeat"
                     gltf-model="#Moon_1_3474.glb"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+            
+            <a-assets>
+                <a-asset-item
+                    id="Sun_1_1391000.glb"
+                    src="assets/Sun_1_1391000.glb"
+                ></a-asset-item>
+            </a-assets>
+            <a-marker preset='kanji'>
+                <a-entity
+                    id="bowser-model"
+                    scale="0.002 0.002 0.002"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#Sun_1_1391000.glb"
                     class="clickable"
                     gesture-handler
                 ></a-entity>

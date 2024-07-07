@@ -32,7 +32,6 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
             >
                 <a-entity
                     id="bowser-model"
@@ -50,8 +49,15 @@
                     src="assets/Sun_1_1391000.glb"
                 ></a-asset-item>
             </a-assets>
-            <a-marker preset='kanji'>
-                <a-entity
+            <a-marker
+                id="marcador-0"
+                type="pattern"
+                preset="custom"
+                url="assets/0.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                ><a-entity
                     id="bowser-model"
                     scale="0.002 0.002 0.002"
                     animation-mixer="loop: repeat"

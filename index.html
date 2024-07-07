@@ -12,6 +12,20 @@
         src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script
         src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script>
+        AFRAME.registerComponent('soundhandler', {
+            tick: function () {
+                // marker is the object3D of marker
+                if (marker.visible && !this.markervisible) {
+                    // do your stuff here once per visible
+                    this.markervisible = true;
+                } else if (!marker.visible) {
+                    this.markervisible = false;
+                }
+            }
+        });
+    </script>
+
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -158,19 +172,5 @@
     </a-scene>
 </body>
 <footer>
-    <script>
-        AFRAME.registerComponent('soundhandler', {
-            tick: function () {
-                // marker is the object3D of marker
-                if (marker.visible && !this.markervisible) {
-                    // do your stuff here once per visible
-                    this.markervisible = true;
-                } else if (!marker.visible) {
-                    this.markervisible = false;
-                }
-            }
-        });
-    </script>
 </footer>
-
 </html>

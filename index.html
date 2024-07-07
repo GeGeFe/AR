@@ -1,108 +1,64 @@
 <!doctype html>
 <html>
-    <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
- <!--
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!--
           <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
  -->
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-    </head>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+</head>
 
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true; precision: medium;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-assets>
-                <a-asset-item
-                    id="Moon_1_3474.glb"
-                    src="assets/Moon_1_3474.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-marker
-                id="marcador-AR"
-                type="pattern"
-                preset="custom"
-                url="assets/AR.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    id="bowser-model"
-                    scale="0.002 0.002 0.002"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#Moon_1_3474.glb"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            
-            <a-assets>
-                <a-asset-item
-                    id="Sun_1_1391000.glb"
-                    src="assets/Sun_1_1391000.glb"
-                ></a-asset-item>
-            </a-assets>
-            <a-marker
-                id="marcador-0"
-                type="pattern"
-                preset="custom"
-                url="assets/pattern-7x7_1000-0.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    id="bowser-model"
-                    scale="0.002 0.002 0.002"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#Sun_1_1391000.glb"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;"
+        renderer="logarithmicDepthBuffer: true; precision: medium;"
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        <a-assets>
+            <a-asset-item id="Moon_1_3474.glb" src="assets/Moon_1_3474.glb"></a-asset-item>
+        </a-assets>
+        <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
+            emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Moon_1_3474.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
 
-            <a-nft
-            type="nft"
-            url="assets/Sol"
-            smooth="true"
-            smoothCount="10"
-            smoothTolerance="0.01"
-            smoothThreshold="5">
-              <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-              <a-entity
-              gltf-model="assets/Sun_1_1391000.glb"
-                  scale="5 5 5"
-                  position="100 100 0"
-              >
-              </a-entity>
-          </a-nft>
+        <a-assets>
+            <a-asset-item id="Sun_1_1391000.glb" src="assets/Sun_1_1391000.glb"></a-asset-item>
+        </a-assets>
+        <a-marker id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Sun_1_1391000.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
 
-            <a-marker preset='hiro'>
-                <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
-                    <a-torus-knot radius='0.26' radius-tubular='0.05'
+        <a-nft type="nft" url="assets/Sol" smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
+            <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+            <a-entity gltf-model="assets/Sun_1_1391000.glb" scale="5 5 5" position="100 100 0">
+            </a-entity>
+        </a-nft>
+
+        <a-marker preset='hiro'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'
                     animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-                    </a-torus-knot>
-                </a-box>
-            </a-marker>
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
 
-            <a-marker preset='kanji'>
-                <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
-                    <a-torus-knot radius='0.26' radius-tubular='0.05'
+        <a-marker preset='kanji'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'
                     animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-                    </a-torus-knot>
-                </a-box>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
 </html>

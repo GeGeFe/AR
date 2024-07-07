@@ -22,7 +22,7 @@
         <a-assets>
             <a-asset-item id="25042_Perseverance.glb" src="assets/25042_Perseverance.glb"></a-asset-item>
             <a-asset-item id="Sun_1_1391000.glb" src="assets/Sun_1_1391000.glb"></a-asset-item>
-<!-- Planetas -->
+            <!-- Planetas -->
             <a-asset-item id="Mercury_1_4878.glb" src="assets/Mercury_1_4878.glb"></a-asset-item>
             <a-asset-item id="Venus_1_12103.glb" src="assets/Venus_1_12103.glb"></a-asset-item>
             <a-asset-item id="Earth_1_12756.glb" src="assets/Earth_1_12756.glb"></a-asset-item>
@@ -32,10 +32,11 @@
             <a-asset-item id="Uranus_1_51118.glb" src="assets/Uranus_1_51118.glb"></a-asset-item>
             <a-asset-item id="Neptune_1_49528.glb" src="assets/Neptune_1_49528.glb"></a-asset-item>
 
-<!-- Lunas -->
+            <!-- Lunas -->
             <a-asset-item id="Moon_1_3474.glb" src="assets/Moon_1_3474.glb"></a-asset-item>
- 
-            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" autoplay="false" preload="auto"></audio>
+
+            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" autoplay="false"
+                preload="auto"></audio>
         </a-assets>
 
         <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
@@ -98,8 +99,8 @@
                 gltf-model="#Neptune_1_49528.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
-        <a-marker id="marcador-9" type="pattern" preset="custom" url="assets/pattern-7x7_1000-9.patt" raycaster="objects: .clickable"
-            emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+        <a-marker id="marcador-9" type="pattern" preset="custom" url="assets/pattern-7x7_1000-9.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
                 gltf-model="#Moon_1_3474.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
@@ -127,14 +128,16 @@
     <script>
         AFRAME.registerComponent('soundhandler', {
             tick: function () {
-                 var entity = document.querySelector('[sound]');
-                 if (document.querySelector('a-marker').object3D.visible == true) {
-                     entity.components.sound.playSound();
-                 } else {
-                     entity.components.sound.pauseSound();
-                 }
+                // marker is the object3D of marker
+                if (marker.visible && !this.markervisible) {
+                    // do your stuff here once per visible
+                    this.markervisible = true;
+                } else if (!marker.visible) {
+                    this.markervisible = false;
+                }
             }
         });
     </script>
 </footer>
+
 </html>

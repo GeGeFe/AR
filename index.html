@@ -43,8 +43,7 @@
             <a-mixin id="FobosyDeimos" scale="1 1 1"></a-mixin>
 
             <!-- Audio -->
-            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3"
-                preload="auto"></audio>
+            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" preload="auto"></audio>
         </a-assets>
 
         <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
@@ -114,9 +113,9 @@
         </a-marker>
 
         <a-marker id="marcador-10" type="pattern" preset="custom" url="assets/pattern-7x7_1000-10.patt"
-        raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-        <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
-            gltf-model="#Io_1_3643.glb" class="clickable" gesture-handler></a-entity>
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Io_1_3643.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker id="marcador-11" type="pattern" preset="custom" url="assets/pattern-7x7_1000-11.patt"
@@ -132,11 +131,11 @@
         </a-marker>
 
         <a-marker id="marcador-13" type="pattern" preset="custom" url="assets/pattern-7x7_1000-13.patt"
-        raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
 
-        <a-entity mixin="FobosyDeimos" obj-model="gltf: #Fobos; gltf: #Deimos" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
-        class="clickable" gesture-handler></a-entity>
-    </a-marker>
+            <a-entity mixin="FobosyDeimos" obj-model="glb: #Fobos; glb: #Deimos" scale="0.002 0.002 0.002"
+                animation-mixer="loop: repeat" class="clickable" gesture-handler></a-entity>
+        </a-marker>
 
 
         <a-marker preset='hiro'>

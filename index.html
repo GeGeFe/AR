@@ -21,24 +21,13 @@
 
         <a-assets>
             <a-asset-item id="25042_Perseverance.glb" src="assets/25042_Perseverance.glb"></a-asset-item>
-        </a-assets>
-        <a-assets>
             <a-asset-item id="Sun_1_1391000.glb" src="assets/Sun_1_1391000.glb"></a-asset-item>
-        </a-assets>
-        <a-assets>
             <a-asset-item id="Mercury_1_4878.glb" src="assets/Mercury_1_4878.glb"></a-asset-item>
-        </a-assets>
-        <a-assets>
             <a-asset-item id="Venus_1_12103.glb" src="assets/Venus_1_12103.glb"></a-asset-item>
-        </a-assets>
-        <a-assets>
             <a-asset-item id="Earth_1_12756.glb" src="assets/Earth_1_12756.glb"></a-asset-item>
-        </a-assets>
-        <a-assets>
             <a-asset-item id="Mars_1_6792.glb" src="assets/Mars_1_6792.glb"></a-asset-item>
-        </a-assets>
-        <a-assets>
             <a-asset-item id="Moon_1_3474.glb" src="assets/Moon_1_3474.glb"></a-asset-item>
+            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.aiff"></audio>
         </a-assets>
 
         <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
@@ -99,6 +88,7 @@
             </a-box>
         </a-marker>
         <a-entity camera></a-entity>
+        <a-sound src="#audio-laser"></a-sound>
     </a-scene>
 </body>
 

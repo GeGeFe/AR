@@ -38,6 +38,10 @@
             <a-asset-item id="Callisto_1_4821.glb" src="assets/Callisto_1_4821.glb"></a-asset-item>
             <a-asset-item id="Ganymede_1_5268.glb" src="assets/Ganymede_1_5268.glb"></a-asset-item>
 
+            <a-asset-item id="Fobos" src="assets/Phobos_1_1000.glb"></a-asset-item>
+            <a-asset-item id="Deimos" src="assets/Deimos_1_1000.glb"></a-asset-item>
+            <a-mixin id="FobosyDeimos" scale="1 1 1"></a-mixin>
+
             <!-- Audio -->
             <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3"
                 preload="auto"></audio>
@@ -126,6 +130,14 @@
             <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
                 gltf-model="#Callisto_1_4821.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
+
+        <a-marker id="marcador-13" type="pattern" preset="custom" url="assets/pattern-7x7_1000-13.patt"
+        raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+
+        <a-entity mixin="FobosyDeimos" obj-model="gltf: #Fobos; gltf: #Deimos" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+        class="clickable" gesture-handler></a-entity>
+    </a-marker>
+
 
         <a-marker preset='hiro'>
             <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>

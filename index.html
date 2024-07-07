@@ -35,7 +35,7 @@
 <!-- Lunas -->
             <a-asset-item id="Moon_1_3474.glb" src="assets/Moon_1_3474.glb"></a-asset-item>
  
-            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" autoplay="true"></audio>
+            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" autoplay="false" preload="auto"></audio>
         </a-assets>
 
         <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
@@ -123,5 +123,18 @@
         <a-entity camera></a-entity>
     </a-scene>
 </body>
-
+<footer>
+    <script>
+        AFRAME.registerComponent('soundhandler', {
+            tick: function () {
+                 var entity = document.querySelector('[sound]');
+                 if (document.querySelector('a-marker').object3D.visible == true) {
+                     entity.components.sound.playSound();
+                 } else {
+                     entity.components.sound.pauseSound();
+                 }
+            }
+        });
+    </script>
+</footer>
 </html>

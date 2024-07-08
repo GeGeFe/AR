@@ -45,7 +45,9 @@
 -->
 
             <!-- Audio -->
+<!--
             <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" preload="auto"></audio>
+-->
         </a-assets>
 
         <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
@@ -147,11 +149,12 @@
                 </a-torus-knot>
             </a-box>
         </a-marker>
-
+<!--
         <a-sound src="#audio-laser" autoplay="false"></a-sound>
-
+-->
         <a-entity camera></a-entity>
     </a-scene>
+<!--
     <script>
         AFRAME.registerComponent('soundhandler', {
             tick: function () {
@@ -165,6 +168,8 @@
             }
         });
     </script>
+-->
+
 </body>
 <footer>
 

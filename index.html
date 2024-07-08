@@ -155,7 +155,7 @@
     <script>
         AFRAME.registerComponent('soundhandler', {
             tick: function () {
-                var entity = document.querySelector('[sound]');
+                var entity = document.querySelector('[audio-laser]');
                 if (document.querySelector('a-marker').object3D.visible == true) {
                     entity.components.sound.playSound();
                 } else {

@@ -12,6 +12,19 @@
         src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script
         src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script>
+        AFRAME.registerComponent('soundhandler', {
+            tick: function () {
+                var entity = document.querySelector('[sound]');
+                if (document.querySelector('a-marker').object3D.visible == true) {
+                    entity.components.sound.playSound();
+                } else {
+                    entity.components.sound.pauseSound();
+                }
+
+            }
+        });
+    </script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -141,16 +154,19 @@
         </a-marker>
 
         <a-marker preset='kanji'>
-            <a-sound src="#audio-laser"></a-sound>
             <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
                 <a-torus-knot radius='0.26' radius-tubular='0.05'
                     animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
                 </a-torus-knot>
             </a-box>
         </a-marker>
+
+        <a-entity sound="src: #audio-laser" autoplay="false"></a-entity>
+
         <a-entity camera></a-entity>
     </a-scene>
 </body>
 <footer>
 </footer>
+
 </html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!--
+          <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+ -->
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;"
+        renderer="logarithmicDepthBuffer: true; precision: medium;"
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+
+        <a-assets>
+            <a-asset-item id="25042_Perseverance.glb" src="assets/25042_Perseverance.glb"></a-asset-item>
+            <a-asset-item id="Sun_1_1391000.glb" src="assets/Sun_1_1391000.glb"></a-asset-item>
+            <!-- Planetas -->
+            <a-asset-item id="Mercury_1_4878.glb" src="assets/Mercury_1_4878.glb"></a-asset-item>
+            <a-asset-item id="Venus_1_12103.glb" src="assets/Venus_1_12103.glb"></a-asset-item>
+            <a-asset-item id="Earth_1_12756.glb" src="assets/Earth_1_12756.glb"></a-asset-item>
+            <a-asset-item id="Mars_1_6792.glb" src="assets/Mars_1_6792.glb"></a-asset-item>
+            <a-asset-item id="Jupiter_1_142984.glb" src="assets/Jupiter_1_142984.glb"></a-asset-item>
+            <a-asset-item id="Saturn_1_120536.glb" src="assets/Saturn_1_120536.glb"></a-asset-item>
+            <a-asset-item id="Uranus_1_51118.glb" src="assets/Uranus_1_51118.glb"></a-asset-item>
+            <a-asset-item id="Neptune_1_49528.glb" src="assets/Neptune_1_49528.glb"></a-asset-item>
+
+            <!-- Lunas -->
+            <a-asset-item id="Moon_1_3474.glb" src="assets/Moon_1_3474.glb"></a-asset-item>
+            <a-asset-item id="Io_1_3643.glb" src="assets/Io_1_3643.glb"></a-asset-item>
+            <a-asset-item id="Callisto_1_4821.glb" src="assets/Callisto_1_4821.glb"></a-asset-item>
+            <a-asset-item id="Ganymede_1_5268.glb" src="assets/Ganymede_1_5268.glb"></a-asset-item>
+
+            <!-- Resolver como cargar Fobos y Deimos.
+            <a-asset-item id="Fobos" src="assets/Phobos_1_1000.glb"></a-asset-item>
+            <a-asset-item id="Deimos" src="assets/Deimos_1_1000.glb"></a-asset-item>
+            <a-mixin id="FobosyDeimos" scale="1 1 1"></a-mixin>
+-->
+
+            <!-- Audio -->
+<!--
+            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" preload="auto"></audio>
+-->
+        </a-assets>
+
+        <a-marker id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt" raycaster="objects: .clickable"
+            emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="1 1 1" animation-mixer="loop: repeat"
+                gltf-model="#25042_Perseverance.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Sun_1_1391000.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-1" type="pattern" preset="custom" url="assets/pattern-7x7_1000-1.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Mercury_1_4878.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-2" type="pattern" preset="custom" url="assets/pattern-7x7_1000-2.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Venus_1_12103.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-3" type="pattern" preset="custom" url="assets/pattern-7x7_1000-3.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Earth_1_12756.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-4" type="pattern" preset="custom" url="assets/pattern-7x7_1000-4.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Mars_1_6792.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-5" type="pattern" preset="custom" url="assets/pattern-7x7_1000-5.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Jupiter_1_142984.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-6" type="pattern" preset="custom" url="assets/pattern-7x7_1000-6.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Saturn_1_120536.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-7" type="pattern" preset="custom" url="assets/pattern-7x7_1000-7.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Uranus_1_51118.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-8" type="pattern" preset="custom" url="assets/pattern-7x7_1000-8.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Neptune_1_49528.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-9" type="pattern" preset="custom" url="assets/pattern-7x7_1000-9.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Moon_1_3474.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-10" type="pattern" preset="custom" url="assets/pattern-7x7_1000-10.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Io_1_3643.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-11" type="pattern" preset="custom" url="assets/pattern-7x7_1000-11.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Ganymede_1_5268.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker id="marcador-12" type="pattern" preset="custom" url="assets/pattern-7x7_1000-12.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="bowser-model" scale="0.002 0.002 0.002" animation-mixer="loop: repeat"
+                gltf-model="#Callisto_1_4821.glb" class="clickable" gesture-handler></a-entity>
+        </a-marker>
+
+        <a-marker preset='hiro'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'
+                    animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
+
+        <a-marker preset='kanji'>
+            <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;' soundhandler>
+                <a-torus-knot radius='0.26' radius-tubular='0.05'
+                    animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
+                </a-torus-knot>
+            </a-box>
+        </a-marker>
+<!--
+        <a-sound src="#audio-laser" autoplay="false"></a-sound>
+-->
+        <a-entity camera></a-entity>
+    </a-scene>
+<!--
+    <script>
+        AFRAME.registerComponent('soundhandler', {
+            tick: function () {
+                var entity = document.querySelector('audio-laser');
+                if (document.querySelector('a-marker').object3D.visible == true) {
+                    entity.components.sound.playSound();
+                } else {
+                    entity.components.sound.pauseSound();
+                }
+
+            }
+        });
+    </script>
+-->
+
+</body>
+<footer>
+
+</footer>
+
+</html>

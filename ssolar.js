@@ -1,4 +1,4 @@
-AFRAME.registerComponent('marcador-1', {
+AFRAME.registerComponent('clickm1', {
   init: function () {
     this.el.sceneEl.addEventListener('markerFound', () => {
       // redirect to custom URL e.g. google.com

@@ -31,14 +31,14 @@
             <a-asset-item id="Neptune_1_49528.glb" src="assets/Neptune_1_49528.glb"></a-asset-item>
         </a-assets>
 
-        <a-marker manejodeclicks id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
+        <a-marker manejodeclicks label="Sol" id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <!-- Escala achicada por que sino no entra de 0,109 a 0,0250225-->
             <a-entity id="bowser-model" scale="0.0250225 0.0250225 0.0250225" animation-mixer="loop: repeat"
                 gltf-model="#Sun_1_1391000.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
-        <a-marker manejodeclicks id="marcador-1" type="pattern" preset="custom" url="assets/pattern-7x7_1000-1.patt"
+        <a-marker manejodeclicks label="Mercurio" id="marcador-1" type="pattern" preset="custom" url="assets/pattern-7x7_1000-1.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="bowser-model" scale="0.00038 0.00038 0.00038" animation-mixer="loop: repeat"
                 gltf-model="#Mercury_1_4878.glb" class="clickable" gesture-handler></a-entity>

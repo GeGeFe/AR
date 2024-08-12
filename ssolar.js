@@ -4,6 +4,7 @@ AFRAME.registerComponent('manejodeclicks', {
   init: function () {
     this.el.addEventListener('markerFound', (e) => {
       console.log(this.el.id);
+      console.log(this.el.label);
       audiomercurio.play();
  //     window.location = 'https://www.google.com/';
     })

@@ -2,9 +2,9 @@ const audiomercurio = new Audio("./assets/laser.mp3")
 
 AFRAME.registerComponent('manejodeclicks', {
   init: function () {
-    this.el.sceneEl.addEventListener('markerFound', () => {
+    this.el.sceneEl.addEventListener('markerFound', (e) => {
       // redirect to custom URL e.g. google.com
-      console.log("¡Detecté a Mercurio!");
+      console.log(e.id);
       audiomercurio.play();
  //     window.location = 'https://www.google.com/';
     })

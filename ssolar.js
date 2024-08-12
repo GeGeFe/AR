@@ -13,7 +13,7 @@ AFRAME.registerComponent('clickm1', {
 
 window.onload = function () {
     document
-      .querySelector(".acercade")
+      .querySelector(".licencia")
       .addEventListener("click", function () {
         alert("Ésta aplicación es software libre./nPuede copiarla y utilizarla todo lo que quiera.");
       });

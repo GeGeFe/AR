@@ -1,4 +1,5 @@
 const audiomercurio = new Audio("./assets/laser.mp3")
+
 AFRAME.registerComponent('clickm1', {
   init: function () {
     this.el.sceneEl.addEventListener('markerFound', () => {
@@ -9,13 +10,11 @@ AFRAME.registerComponent('clickm1', {
     })
   }
 });
+
 window.onload = function () {
     document
-      .querySelector(".unboton")
+      .querySelector(".acercade")
       .addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
-        alert("¡Hola!");
+        alert("Ésta aplicación es software libre./nPuede copiarla y utilizarla todo lo que quiera.");
       });
   };

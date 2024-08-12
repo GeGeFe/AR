@@ -6,11 +6,11 @@
     height: 5em;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     z-index: 10;
 }
 
-.unboton {
+.licencia {
     padding: 0.25em;
     border-radius: 4px;
     border: none;

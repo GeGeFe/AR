@@ -4,7 +4,7 @@ AFRAME.registerComponent('manejodeclicks', {
   init: function () {
     this.el.sceneEl.addEventListener('markerFound', (e) => {
       // redirect to custom URL e.g. google.com
-      console.log(e.id);
+      console.log(this.el.id);
       audiomercurio.play();
  //     window.location = 'https://www.google.com/';
     })

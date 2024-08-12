@@ -1,6 +1,6 @@
 const audiomercurio = new Audio("./assets/laser.mp3")
 
-AFRAME.registerComponent('clickm1', {
+AFRAME.registerComponent('manejodeclicks', {
   init: function () {
     this.el.sceneEl.addEventListener('markerFound', () => {
       // redirect to custom URL e.g. google.com

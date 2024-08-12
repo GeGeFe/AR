@@ -2,7 +2,7 @@ const audiomercurio = new Audio("./assets/laser.mp3")
 
 AFRAME.registerComponent('manejodeclicks', {
   init: function () {
-    this.el.sceneEl.addEventListener('markerFound', (e) => {
+    this.el.addEventListener('markerFound', (e) => {
       console.log(this.el.id);
       audiomercurio.play();
  //     window.location = 'https://www.google.com/';

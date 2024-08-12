@@ -16,7 +16,7 @@
 <body style="margin: 0; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;"
         renderer="logarithmicDepthBuffer: true; precision: medium;"
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector manejodeclicks>
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
 
         <a-assets>
             <a-asset-item id="Sun_1_1391000.glb" src="assets/Sun_1_1391000.glb"></a-asset-item>
@@ -31,7 +31,7 @@
             <a-asset-item id="Neptune_1_49528.glb" src="assets/Neptune_1_49528.glb"></a-asset-item>
         </a-assets>
 
-        <a-marker id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
+        <a-marker manejodeclicks id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <!-- Escala achicada por que sino no entra de 0,109 a 0,0250225-->
             <a-entity id="bowser-model" scale="0.0250225 0.0250225 0.0250225" animation-mixer="loop: repeat"

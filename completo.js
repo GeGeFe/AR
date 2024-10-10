@@ -12,17 +12,20 @@ AFRAME.registerComponent('manejodeclicks', {
 });
 
 window.onload = function () {
-    document
-      .querySelector(".licencia")
-      .addEventListener("click", function () {
-        alert("Ésta aplicación es software libre.\nPuede copiarla y utilizarla todo lo que quiera.");
-      });
-    document
-      .querySelector(".escala")
-      .addEventListener("click", function () {
-        escala=!escala;
-        valorescala = escala?document.getElementById('mercurio').getAttribute("escala"):0.002;
-        console.log(valorescala);
-        document.getElementById('mercurio').object3D.scale.set(valorescala, valorescala, valorescala);
+  document
+    .querySelector(".licencia")
+    .addEventListener("click", function () {
+      alert("Ésta aplicación es software libre.\nPuede copiarla y utilizarla todo lo que quiera.");
     });
-  };
+  document
+    .querySelector(".escala")
+    .addEventListener("click", function () {
+      escala = !escala;
+      var objetos = document.querySelectorAll('.clickable');
+      for (var i = 0; i < objetos.length; i++) {
+        valorescala = escala ? objetos[i].getAttribute("escala") : 0.002;
+        console.log(valorescala);
+        objetos[i].object3D.scale.set(valorescala, valorescala, valorescala);
+      }
+    });
+};

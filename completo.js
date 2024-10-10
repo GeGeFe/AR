@@ -1,3 +1,4 @@
+var miEscena = document.querySelector('a-scene');
 const audiogeneral = new Audio("./assets/laser.mp3")
 var escala = true;
 
@@ -19,7 +20,9 @@ window.onload = function () {
       .querySelector(".escala")
       .addEventListener("click", function () {
         escala=!escala;
-        document.getElementById('mercurio').setAttribute(`scale`, "1 1 1");
-        console.log("Intentando cambiar escala a Mercurio");
-      });
+//        document.getElementById('mercurio').setAttribute('scale', "1 1 1");
+        miEscena.querySelector("mercurio").setAttribute('scale', "1 1 1");
+        console.log("Intentando cambiar escala a Mercurio 2");
+
+    });
   };

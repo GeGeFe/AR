@@ -22,7 +22,7 @@ window.onload = function () {
         escala=!escala;
 //        document.getElementById('mercurio').setAttribute('scale', "1 1 1");
 //        miEscena.querySelector("mercurio").object3D.scale.set(1, 1, 1);
-        document.getElementById('mercurio').object3D.scale.set(1, 1, 1);
+        document.getElementById('mercurio').object3D.scale.set(0.01, 0.01, 0.01);
         console.log("Intentando cambiar escala a Mercurio 2");
 
     });

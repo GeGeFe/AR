@@ -19,8 +19,8 @@ window.onload = function () {
     document
       .querySelector(".escala")
       .addEventListener("click", function () {
-        alert("Escala");
         escala=!escala;
+        alert("Escala"+escala);
         document.querySelector('.escala').value = "Escala="+escala?"off":"on";
       });
   };

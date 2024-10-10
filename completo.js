@@ -21,7 +21,7 @@ window.onload = function () {
       .addEventListener("click", function () {
         escala=!escala;
 //        document.getElementById('mercurio').setAttribute('scale', "1 1 1");
-        miEscena.querySelector("mercurio").setAttribute('scale', "1 1 1");
+        miEscena.querySelector("mercurio").object3D.scale.set(1, 1, 1);;
         console.log("Intentando cambiar escala a Mercurio 2");
 
     });

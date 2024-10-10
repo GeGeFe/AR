@@ -19,7 +19,7 @@ window.onload = function () {
       .querySelector(".escala")
       .addEventListener("click", function () {
         escala=!escala;
-        document.getElementById('mercurio').scale = "1 1 1";
+        document.getElementById('mercurio').setAttribute(`scale`, "1 1 1");
         console.log("Intentando cambiar escala a Mercurio");
       });
   };

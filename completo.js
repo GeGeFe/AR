@@ -4,7 +4,6 @@ var escala = true;
 AFRAME.registerComponent('manejodeclicks', {
   init: function () {
     this.el.addEventListener('markerFound', (e) => {
-      console.log(this.el.id);
       audiogeneral.play();
     })
   }
@@ -21,5 +20,6 @@ window.onload = function () {
       .addEventListener("click", function () {
         escala=!escala;
         document.getElementById('mercurio').scale = "1 1 1";
+        console.log("Intentando cambiar escala a Mercurio");
       });
   };

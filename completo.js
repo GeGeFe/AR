@@ -20,8 +20,7 @@ window.onload = function () {
       .querySelector(".escala")
       .addEventListener("click", function () {
         escala=!escala;
-//        document.getElementById('mercurio').setAttribute('scale', "1 1 1");
-//        miEscena.querySelector("mercurio").object3D.scale.set(1, 1, 1);
+// La escala 0.002 es la sin escala. Copiar en cada uno la escala de ssolar.
         document.getElementById('mercurio').object3D.scale.set(0.01, 0.01, 0.01);
         console.log("Intentando cambiar escala a Mercurio 2");
 

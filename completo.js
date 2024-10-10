@@ -1,6 +1,7 @@
 //var miEscena = document.querySelector('a-scene');
 const audiogeneral = new Audio("./assets/laser.mp3")
 var escala = true;
+var valorescala = 0.002;
 
 AFRAME.registerComponent('manejodeclicks', {
   init: function () {
@@ -20,9 +21,8 @@ window.onload = function () {
       .querySelector(".escala")
       .addEventListener("click", function () {
         escala=!escala;
-// La escala 0.002 es la sin escala. Copiar en cada uno la escala de ssolar.
-        document.getElementById('mercurio').object3D.scale.set(0.01, 0.01, 0.01);
-        console.log("Intentando cambiar escala a Mercurio 2");
-
+        valorescala = escala?document.getElementById('mercurio').getAttribute("escala"):0.002;
+        console.log(valorescala);
+        document.getElementById('mercurio').object3D.scale.set(valorescala, valorescala, valorescala);
     });
   };

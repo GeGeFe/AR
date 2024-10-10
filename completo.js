@@ -1,4 +1,5 @@
 const audiogeneral = new Audio("./assets/laser.mp3")
+var escala = true;
 
 AFRAME.registerComponent('manejodeclicks', {
   init: function () {
@@ -14,5 +15,11 @@ window.onload = function () {
       .querySelector(".licencia")
       .addEventListener("click", function () {
         alert("Ésta aplicación es software libre.\nPuede copiarla y utilizarla todo lo que quiera.");
+      });
+    document
+      .querySelector(".escala")
+      .addEventListener("click", function () {
+        escala=not(escala);
+        document.getElementById('.escala').value = "Escala="+escala?"on":"off";
       });
   };

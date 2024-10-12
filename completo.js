@@ -27,7 +27,6 @@ window.onload = function () {
       var objetos = document.querySelectorAll('.clickable');
       for (var i = 0; i < objetos.length; i++) {
         valorescala = escala ? objetos[i].getAttribute("escala") : 0.002;
-        console.log(valorescala);
         objetos[i].object3D.scale.set(valorescala, valorescala, valorescala);
       }
     });

@@ -2,11 +2,14 @@
 const audiogeneral = new Audio("./assets/laser.mp3")
 var escala = true;
 var valorescala = 0.002;
+var sonido = true;
 
-AFRAME.registerComponent('manejodeclicks', {
+AFRAME.registerComponent('reconocido', {
   init: function () {
     this.el.addEventListener('markerFound', (e) => {
-      audiogeneral.play();
+      if (sonido) {
+        audiogeneral.play();
+      };
     })
   }
 });
@@ -27,5 +30,10 @@ window.onload = function () {
         console.log(valorescala);
         objetos[i].object3D.scale.set(valorescala, valorescala, valorescala);
       }
+    });
+  document
+    .querySelector(".sonido")
+    .addEventListener("click", function () {
+      sonido = !sonido;
     });
 };

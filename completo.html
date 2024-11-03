@@ -5,14 +5,14 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-<!--
+    <!--
     <script
         src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script
         src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
 -->
-        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
-        <script src="completo.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+    <script src="completo.js"></script>
     <link rel="stylesheet" href="completo.css">
 </head>
 
@@ -52,8 +52,8 @@
 -->
         </a-assets>
 
-        <a-marker reconocido id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt"
-            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+        <a-marker reconocido preset='kanji' raycaster="objects: .clickable" emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="perseverance" scale="1 1 1" escala="1" animation-mixer="loop: repeat"
                 gltf-model="#25042_Perseverance.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
@@ -61,12 +61,14 @@
         <a-marker reconocido id="marcador-0" type="pattern" preset="custom" url="assets/pattern-7x7_1000-0.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
             <!-- Escala achicada por que sino no entra de 0,109 a 0,0250225-->
+            <a-entity class="etiqueta" text="font: mozillavr; value: Sol;" position="0 1 0" scale="2 2 2"></a-entity>
             <a-entity id="sol" scale="0.0250225 0.0250225 0.0250225" escala="0.0250225" animation-mixer="loop: repeat"
                 gltf-model="#Sun_1_1391000.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido id="marcador-1" type="pattern" preset="custom" url="assets/pattern-7x7_1000-1.patt"
             raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity class="etiqueta" text="font: mozillavr; value: Mercurio;" position="0 1 0" scale="2 2 2"></a-entity>
             <a-entity id="mercurio" scale="0.00038 0.00038 0.00038" escala="0.00038" animation-mixer="loop: repeat"
                 gltf-model="#Mercury_1_4878.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
@@ -145,7 +147,7 @@
             </a-box>
         </a-marker>
 
-        <a-marker reconocido preset='kanji'>
+        <a-marker reconocido id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt">
             <a-entity text="font: mozillavr; value: Hola mundo;"></a-entity>
             <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;' soundhandler>
                 <a-torus-knot radius='0.26' radius-tubular='0.05'

@@ -39,3 +39,8 @@
     width: 4em;
     height: 2em;
 }
+
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }

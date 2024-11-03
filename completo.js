@@ -11,6 +11,8 @@ AFRAME.registerComponent('reconocido', {
         audiogeneral.play();
       };
       console.log(e.target.id);
+      console.log(e.target.texto);
+      document.getElementById("parrafo").innerText=e.target.texto; 
     })
   }
 });

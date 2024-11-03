@@ -12,7 +12,7 @@ AFRAME.registerComponent('reconocido', {
       };
       console.log(e.target.id);
       console.log(e.target.texto);
-      document.getElementById("miTexto").innerText=e.target.texto; 
+      document.getElementById("miTexto").innerText=document.getElementById(e.target.id).getAttribute("texto");
     })
   }
 });

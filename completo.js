@@ -9,8 +9,8 @@ AFRAME.registerComponent('reconocido', {
     this.el.addEventListener('markerFound', (e) => {
       if (sonido) {
         audiogeneral.play();
-        console.log(e.getAttribute(id));
       };
+      console.log(e.getAttribute(id));
     })
   }
 });

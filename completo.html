@@ -19,7 +19,7 @@
 <body style="margin: 0; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;"
         renderer="logarithmicDepthBuffer: true; precision: medium;"
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        arjs="trackingMethod: best; sourceType: webcam; mirror=true; debugUIEnabled: false;" id="scene" embedded gesture-detector>
 
         <a-assets>
             <a-asset-item id="25042_Perseverance.glb" src="assets/25042_Perseverance.glb"></a-asset-item>
@@ -153,7 +153,7 @@
                 </a-torus-knot>
             </a-box>
         </a-marker>
-        <a-entity camera look-controls position="0 0 0" scale="-1 1 1"></a-entity>
+        <a-entity camera></a-entity>
     </a-scene>
 
     <div class="buttons">

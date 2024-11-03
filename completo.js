@@ -18,7 +18,7 @@ window.onload = function () {
   document
     .querySelector(".licencia")
     .addEventListener("click", function () {
-      alert("Ésta aplicación es software libre.\nPuede copiarla y utilizarla todo lo que quiera.");
+      alert("Ésta aplicación es software libre.\nPuede copiarla y utilizarla todo lo que quiera.\n\nEl código fuente se encuentra en: https://github.com/GeGeFe/AR");
     });
   document
     .querySelector(".escala")

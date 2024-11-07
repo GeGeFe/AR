@@ -1,4 +1,4 @@
-const audiogeneral = new Audio("./assets/laser.mp3")
+const audiogeneral = new Audio("./assets/sonidos/laser.mp3")
 
 AFRAME.registerComponent('manejodeclicks', {
   init: function () {

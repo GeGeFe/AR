@@ -22,25 +22,25 @@
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
 
         <a-assets>
-            <a-asset-item id="25042_Perseverance.glb" src="assets/25042_Perseverance.glb"></a-asset-item>
-            <a-asset-item id="Hubble.glb" src="assets/Hubble.glb"></a-asset-item>
-            <a-asset-item id="ISS_stationary.glb" src="assets/ISS_stationary.glb"></a-asset-item>
-            <a-asset-item id="Sun_1_1391000.glb" src="assets/Sun_1_1391000.glb"></a-asset-item>
+            <a-asset-item id="25042_Perseverance.glb" src="assets/full/25042_Perseverance.glb"></a-asset-item>
+            <a-asset-item id="Hubble.glb" src="assets/full/Hubble.glb"></a-asset-item>
+            <a-asset-item id="ISS_stationary.glb" src="assets/full/ISS_stationary.glb"></a-asset-item>
+            <a-asset-item id="Sun_1_1391000.glb" src="assets/full/Sun_1_1391000.glb"></a-asset-item>
             <!-- Planetas -->
-            <a-asset-item id="Mercury_1_4878.glb" src="assets/Mercury_1_4878.glb"></a-asset-item>
-            <a-asset-item id="Venus_1_12103.glb" src="assets/Venus_1_12103.glb"></a-asset-item>
-            <a-asset-item id="Earth_1_12756.glb" src="assets/Earth_1_12756.glb"></a-asset-item>
-            <a-asset-item id="Mars_1_6792.glb" src="assets/Mars_1_6792.glb"></a-asset-item>
-            <a-asset-item id="Jupiter_1_142984.glb" src="assets/Jupiter_1_142984.glb"></a-asset-item>
-            <a-asset-item id="Saturn_1_120536.glb" src="assets/Saturn_1_120536.glb"></a-asset-item>
-            <a-asset-item id="Uranus_1_51118.glb" src="assets/Uranus_1_51118.glb"></a-asset-item>
-            <a-asset-item id="Neptune_1_49528.glb" src="assets/Neptune_1_49528.glb"></a-asset-item>
+            <a-asset-item id="Mercury_1_4878.glb" src="assets/full/Mercury_1_4878.glb"></a-asset-item>
+            <a-asset-item id="Venus_1_12103.glb" src="assets/full/Venus_1_12103.glb"></a-asset-item>
+            <a-asset-item id="Earth_1_12756.glb" src="assets/full/Earth_1_12756.glb"></a-asset-item>
+            <a-asset-item id="Mars_1_6792.glb" src="assets/full/Mars_1_6792.glb"></a-asset-item>
+            <a-asset-item id="Jupiter_1_142984.glb" src="assets/full/Jupiter_1_142984.glb"></a-asset-item>
+            <a-asset-item id="Saturn_1_120536.glb" src="assets/full/Saturn_1_120536.glb"></a-asset-item>
+            <a-asset-item id="Uranus_1_51118.glb" src="assets/full/Uranus_1_51118.glb"></a-asset-item>
+            <a-asset-item id="Neptune_1_49528.glb" src="assets/full/Neptune_1_49528.glb"></a-asset-item>
 
             <!-- Lunas -->
-            <a-asset-item id="Moon_1_3474.glb" src="assets/Moon_1_3474.glb"></a-asset-item>
-            <a-asset-item id="Io_1_3643.glb" src="assets/Io_1_3643.glb"></a-asset-item>
-            <a-asset-item id="Callisto_1_4821.glb" src="assets/Callisto_1_4821.glb"></a-asset-item>
-            <a-asset-item id="Ganymede_1_5268.glb" src="assets/Ganymede_1_5268.glb"></a-asset-item>
+            <a-asset-item id="Moon_1_3474.glb" src="assets/full/Moon_1_3474.glb"></a-asset-item>
+            <a-asset-item id="Io_1_3643.glb" src="assets/full/Io_1_3643.glb"></a-asset-item>
+            <a-asset-item id="Callisto_1_4821.glb" src="assets/full/Callisto_1_4821.glb"></a-asset-item>
+            <a-asset-item id="Ganymede_1_5268.glb" src="assets/full/Ganymede_1_5268.glb"></a-asset-item>
 
             <!-- Resolver como cargar Fobos y Deimos.
             <a-asset-item id="Fobos" src="assets/Phobos_1_1000.glb"></a-asset-item>
@@ -55,7 +55,7 @@
         </a-assets>
 
         <a-marker reconocido texto="Sol" id="marcador-0" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-0.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-0.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <!-- Escala achicada por que sino no entra de 0,109 a 0,0250225-->
             <a-entity id="sol" scale="0.0250225 0.0250225 0.0250225" escala="0.0250225" animation-mixer="loop: repeat"
@@ -63,105 +63,105 @@
         </a-marker>
 
         <a-marker reconocido texto="Mercurio" id="marcador-1" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-1.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-1.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="mercurio" scale="0.00038 0.00038 0.00038" escala="0.00038" animation-mixer="loop: repeat"
                 gltf-model="#Mercury_1_4878.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Venus" id="marcador-2" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-2.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-2.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="venus" scale="0.00094 0.00094 0.00094" escala="0.00094" animation-mixer="loop: repeat"
                 gltf-model="#Venus_1_12103.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Tierra" id="marcador-3" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-3.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-3.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="tierra" scale="0.001 0.001 0.001" escala="0.001" animation-mixer="loop: repeat"
                 gltf-model="#Earth_1_12756.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Marte" id="marcador-4" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-4.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-4.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="marte" scale="0.00053 0.00053 0.00053" escala="0.00053" animation-mixer="loop: repeat"
                 gltf-model="#Mars_1_6792.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Jupiter" id="marcador-5" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-5.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-5.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="jupiter" scale="0.01119 0.01119 0.01119" escala="0.01119" animation-mixer="loop: repeat"
                 gltf-model="#Jupiter_1_142984.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Saturno" id="marcador-6" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-6.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-6.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="saturno" scale="0.00945 0.00945 0.00945" escala="0.00945" animation-mixer="loop: repeat"
                 gltf-model="#Saturn_1_120536.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Urano" id="marcador-7" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-7.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-7.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="urano" scale="0.00406 0.00406 0.00406" escala="0.00406" animation-mixer="loop: repeat"
                 gltf-model="#Uranus_1_51118.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Neptuno" id="marcador-8" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-8.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-8.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="neptuno" scale="0.00385 0.00385 0.00385" escala="0.00385" animation-mixer="loop: repeat"
                 gltf-model="#Neptune_1_49528.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Luna" id="marcador-9" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-9.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-9.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="luna" scale="0.00027 0.00027 0.00027" escala="0.00027" animation-mixer="loop: repeat"
                 gltf-model="#Moon_1_3474.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Io" id="marcador-10" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-10.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-10.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="io" scale="0.00028 0.00028 0.00028" escala="0.00028" animation-mixer="loop: repeat"
                 gltf-model="#Io_1_3643.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Ganimedes" id="marcador-11" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-11.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-11.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="ganimedes" scale="0.00041 0.00041 0.00041" escala="0.00041" animation-mixer="loop: repeat"
                 gltf-model="#Ganymede_1_5268.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Calisto" id="marcador-12" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-12.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-12.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="calisto" scale="0.00038 0.00038 0.00038" escala="0.00038" animation-mixer="loop: repeat"
                 gltf-model="#Callisto_1_4821.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Perseverance" id="marcador-13" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-13.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-13.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity id="perseverance" scale="1 1 1" escala="1" animation-mixer="loop: repeat"
                 gltf-model="#25042_Perseverance.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="ISS" id="marcador-14" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-14.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-14.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse">
             <a-entity id="hubble" scale="0.1 0.1 0.1" escala="0.1" animation-mixer="loop: repeat"
                 gltf-model="#ISS_stationary.glb" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
         <a-marker reconocido texto="Hubble" id="marcador-15" type="pattern" preset="custom"
-            url="assets/pattern-7x7_1000-15.patt" raycaster="objects: .clickable" emitevents="true"
+            url="assets/patt/pattern-7x7_1000-15.patt" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse">
             <a-entity id="hubble" scale="1 1 1" escala="1" animation-mixer="loop: repeat" gltf-model="#Hubble.glb"
                 class="clickable" gesture-handler></a-entity>
@@ -175,7 +175,7 @@
             </a-box>
         </a-marker>
 
-        <a-marker reconocido id="marcador-AR" type="pattern" preset="custom" url="assets/AR.patt">
+        <a-marker reconocido id="marcador-AR" type="pattern" preset="custom" url="asset/patt/AR.patt">
             <a-entity text="font: mozillavr; value: Hola mundo;"></a-entity>
             <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;' soundhandler>
                 <a-torus-knot radius='0.26' radius-tubular='0.05'

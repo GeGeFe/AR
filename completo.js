@@ -1,5 +1,5 @@
 //var miEscena = document.querySelector('a-scene');
-const audiogeneral = new Audio("./assets/laser.mp3")
+const audiogeneral = new Audio("./assets/sonidos/laser.mp3")
 var escala = true;
 var valorescala = 0.002;
 var sonido = true;

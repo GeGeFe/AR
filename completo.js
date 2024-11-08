@@ -3,6 +3,7 @@ const audiogeneral = new Audio("./assets/sonidos/laser.mp3")
 var escala = true;
 var valorescala = 0.002;
 var sonido = true;
+var botones = true;
 
 AFRAME.registerComponent('reconocido', {
   init: function () {
@@ -10,7 +11,7 @@ AFRAME.registerComponent('reconocido', {
       if (sonido) {
         audiogeneral.play();
       };
-      document.getElementById("miTexto").innerText=document.getElementById(e.target.id).getAttribute("texto");
+      document.getElementById("miTexto").innerText = document.getElementById(e.target.id).getAttribute("texto");
     })
   }
 });
@@ -35,5 +36,14 @@ window.onload = function () {
     .querySelector(".sonido")
     .addEventListener("click", function () {
       sonido = !sonido;
+    });
+  document
+    .querySelector(".botones")
+    .addEventListener("click", function () {
+      botones = !botones;
+      var objetos = document.querySelectorAll('.button');
+      for (var i = 1; i < objetos.length; i++) {
+        objetos[i].style.visibility = botones?'visible':'hidden';
+      }
     });
 };

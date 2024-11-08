@@ -41,7 +41,7 @@ window.onload = function () {
     .querySelector(".botones")
     .addEventListener("click", function () {
       botones = !botones;
-      var objetos = document.querySelectorAll('.button');
+      var objetos = document.querySelectorAll('.boton');
       for (var i = 1; i < objetos.length; i++) {
         objetos[i].style.visibility = botones?'visible':'hidden';
       }

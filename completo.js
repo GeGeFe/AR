@@ -10,8 +10,6 @@ AFRAME.registerComponent('reconocido', {
       if (sonido) {
         audiogeneral.play();
       };
-      console.log(e.target.id);
-      console.log(document.getElementById(e.target.id).getAttribute("texto"));
       document.getElementById("miTexto").innerText=document.getElementById(e.target.id).getAttribute("texto");
     })
   }

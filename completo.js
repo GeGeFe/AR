@@ -43,7 +43,7 @@ window.onload = function () {
       botones = !botones;
       var objetos = document.querySelectorAll('.button');
       for (var i = 1; i < objetos.length; i++) {
-        objetos[i].style.visibility = botones?'hidden':'visible';
+        objetos[i].style.visibility = botones?'visible':'hidden';
       }
     });
 };

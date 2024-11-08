@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title> El universo en tus manos </title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -16,11 +17,16 @@
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
 
         <a-assets>
+
+<!-- Objetos artificiales-->
             <a-asset-item id="25042_Perseverance.glb" src="assets/full/25042_Perseverance.glb"></a-asset-item>
             <a-asset-item id="Hubble.glb" src="assets/full/Hubble.glb"></a-asset-item>
             <a-asset-item id="ISS_stationary.glb" src="assets/full/ISS_stationary.glb"></a-asset-item>
+
+<!-- Sol -->
             <a-asset-item id="Sun_1_1391000.glb" src="assets/full/Sun_1_1391000.glb"></a-asset-item>
-            <!-- Planetas -->
+
+<!-- Planetas -->
             <a-asset-item id="Mercury_1_4878.glb" src="assets/full/Mercury_1_4878.glb"></a-asset-item>
             <a-asset-item id="Venus_1_12103.glb" src="assets/full/Venus_1_12103.glb"></a-asset-item>
             <a-asset-item id="Earth_1_12756.glb" src="assets/full/Earth_1_12756.glb"></a-asset-item>
@@ -30,7 +36,7 @@
             <a-asset-item id="Uranus_1_51118.glb" src="assets/full/Uranus_1_51118.glb"></a-asset-item>
             <a-asset-item id="Neptune_1_49528.glb" src="assets/full/Neptune_1_49528.glb"></a-asset-item>
 
-            <!-- Lunas -->
+<!-- Lunas -->
             <a-asset-item id="Moon_1_3474.glb" src="assets/full/Moon_1_3474.glb"></a-asset-item>
             <a-asset-item id="Io_1_3643.glb" src="assets/full/Io_1_3643.glb"></a-asset-item>
             <a-asset-item id="Callisto_1_4821.glb" src="assets/full/Callisto_1_4821.glb"></a-asset-item>

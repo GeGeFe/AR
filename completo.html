@@ -5,12 +5,6 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <!--
-    <script
-        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-    <script
-        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
--->
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
     <script src="completo.js"></script>
     <link rel="stylesheet" href="completo.css">
@@ -42,16 +36,6 @@
             <a-asset-item id="Callisto_1_4821.glb" src="assets/full/Callisto_1_4821.glb"></a-asset-item>
             <a-asset-item id="Ganymede_1_5268.glb" src="assets/full/Ganymede_1_5268.glb"></a-asset-item>
 
-            <!-- Resolver como cargar Fobos y Deimos.
-            <a-asset-item id="Fobos" src="assets/Phobos_1_1000.glb"></a-asset-item>
-            <a-asset-item id="Deimos" src="assets/Deimos_1_1000.glb"></a-asset-item>
-            <a-mixin id="FobosyDeimos" scale="1 1 1"></a-mixin>
--->
-
-            <!-- Audio -->
-            <!--
-            <audio id="audio-laser" src="assets/92827__mrsamysamson__2nd-altered-laser-shot.mp3" preload="auto"></audio>
--->
         </a-assets>
 
         <a-marker reconocido texto="Sol" id="marcador-0" type="pattern" preset="custom"
@@ -185,16 +169,13 @@
         </a-marker>
         <a-entity camera look-controls position="0 0 0" scale="-1 1 1"></a-entity>
     </a-scene>
-
-    <div class="buttons">
-        <button class="licencia">Licencia</button>
-        <button class="escala">Escala</button>
-        <button class="sonido">Sonido</button>
-        <p id="miTexto"></p>
-    </div>
 </body>
-<footer>
-
-</footer>
-
+    <footer>
+        <div class="buttons">
+            <button class="licencia">Licencia</button>
+            <button class="escala">Escala</button>
+            <button class="sonido">Sonido</button>
+            <p id="miTexto"></p>
+        </div>
+    </footer>
 </html>
